@@ -10,6 +10,10 @@
 
 namespace qymdrv
 {
+    /**
+     * @brief SSd1309 Commands
+     * 
+     */
     enum Ssd1309Commands
     {
         SSD1309_ADDRESS = 0x3C,
@@ -64,18 +68,83 @@ namespace qymdrv
 
 
     public:
-    
+        /**
+         * @brief Set the HAL handle i2c struct
+         *
+         * @param i2cPort HAL handle i2c struct
+         */
         void SetPort(I2C_HandleTypeDef *i2cPort);
+        /**
+         * @brief Set the Reset Pin 
+         * 
+         * @param port Reset GPIO Port
+         * @param pin Reset GPIO Pin
+         */
         void SetResetPin(GPIO_TypeDef *port, uint16_t pin);
+        /**
+         * @brief Set the i2c Address m24cxx
+         *
+         * @param address i2c address
+         */
         void SetAddress(uint8_t address);
+        /**
+         * @brief Clear display
+         * 
+         * @param color Color false = black, true = white
+         */
         void Clear(bool color = false);
+        /**
+         * @brief Invert display
+         * 
+         * @param color Color false = black, true = white
+         */
         void Invert(bool color);
-
+        /**
+         * @brief Initiailize driver
+         *
+         * @return true Done
+         * @return false Error
+         */
         bool Initialize();
+        /**
+         * @brief De initialize driver
+         *
+         * @return true Done
+         * @return false Error
+         */
         bool DeInitialize();
+        /**
+         * @brief Send command to display controller
+         * 
+         * @param command Command
+         * @param delayUs Delay time in Us
+         * @return true Done
+         * @return false Error
+         */
         bool SendCommand(uint8_t command, uint16_t delayUs = 0);
+        /**
+         * @brief Send data to display controller
+         * 
+         * @param buffer Data array
+         * @param x Coord X
+         * @param y Coord Y
+         * @return true Done
+         * @return false Error
+         */
         bool SendFrame(qymui::DisplayBuffer *buffer, uint16_t x = 0, uint16_t y = 0);
+        /**
+         * @brief Reset display
+         * 
+         * @return true Done
+         * @return false Error
+         */
         bool Reset();
+        /**
+         * @brief Check display availability
+         * 
+         * @return true Available
+         * @return false Error 
+         */
         bool Check();
     };
 
