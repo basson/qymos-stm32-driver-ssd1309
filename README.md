@@ -23,7 +23,7 @@ displayBuffer.size = 1024;
 displayBuffer.width = 128;
 displayBuffer.height = 64;
 
-qymdrv::Ssd1309 driver;
+qymos::driver::Ssd1309 driver;
 
 // Set HAL i2c handle struct
 driver.SetPort(&hi2c2);

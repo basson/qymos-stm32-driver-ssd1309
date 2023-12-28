@@ -1,9 +1,9 @@
 {
-    "name": "QymDrv STM32 SSD1309 display driver",
+    "name": "QymOS smt32 SSD1309 display driver",
     "version": "0.0.1",
     "authors": {
         "name": "Denis Kazachenkov",
         "email": "basson30@gmail.com",
-        "url": "https://github.com/basson/qymdrv-stm32-ssd1309"
+        "url": "https://github.com/basson/qymos-stm32-driver-ssd1309"
     }
 }
