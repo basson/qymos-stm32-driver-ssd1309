@@ -132,7 +132,7 @@ namespace qymos
              * @return true Done
              * @return false Error
              */
-            bool SendFrame(qymui::DisplayBuffer *buffer, uint16_t x = 0, uint16_t y = 0);
+            bool SendFrame(qymos::gui::DisplayBuffer *buffer, uint16_t x = 0, uint16_t y = 0);
             /**
              * @brief Reset display
              *

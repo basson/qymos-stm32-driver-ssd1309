@@ -91,7 +91,7 @@ namespace qymos
             return false;
         }
 
-        bool Ssd1309::SendFrame(qymui::DisplayBuffer *buffer, uint16_t x, uint16_t y)
+        bool Ssd1309::SendFrame(qymos::gui::DisplayBuffer *buffer, uint16_t x, uint16_t y)
         {
             // for (uint8_t i = 0; i < 8; i++)
             // {
