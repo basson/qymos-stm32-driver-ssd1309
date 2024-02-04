@@ -1,4 +1,4 @@
-#include "../include/ssd1309.hpp"
+#include "../include/drivers/ssd1309.hpp"
 
 namespace qymos
 {
