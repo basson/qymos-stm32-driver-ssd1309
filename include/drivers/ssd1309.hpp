@@ -5,8 +5,8 @@
 
 #include "stm32f1xx_hal.h"
 
-#include "../../qymos-stm32-gui-monochrome/types.hpp"
-#include "../../qymos-stm32-gui-monochrome/idriver.hpp"
+#include "gui/types.hpp"
+#include "gui/idriver.hpp"
 
 namespace qymos
 {
